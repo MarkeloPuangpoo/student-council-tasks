@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --input-background: #ffffff;
+  --input-foreground: #171717;
+  --input-border: #e5e7eb;
+  --input-focus-border: #0ea5e9;
+  --input-focus-ring: rgba(14, 165, 233, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --input-background: #1a1a1a;
+    --input-foreground: #ededed;
+    --input-border: #2a2a2a;
+    --input-focus-border: #0ea5e9;
+    --input-focus-ring: rgba(14, 165, 233, 0.2);
+  }
+}
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+}
+
+/* Form elements styling */
+input, select, textarea {
+  background-color: #ffffff !important;
+  color: #171717 !important;
+  border-color: #e5e7eb !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #0ea5e9 !important;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2) !important;
+}
+
+/* Placeholder styling */
+input::placeholder, textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Select dropdown styling */
+select option {
+  background-color: #ffffff;
+  color: #171717;
+}
